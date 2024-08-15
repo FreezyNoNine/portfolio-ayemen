@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Ayemen Loucif - Portfolio</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <header>
+        <div class="header-container">
+            <a href="index.html" class="logo">
+                Ayemen Loucif </a>
+            <nav class="nav-desktop">
+                <ul>
+                    <li><a href="index.html" class="active">Accueil</a></li>
+                    <li><a href="cv.html">CV</a></li>
+                    <li><a href="stage.html">Stage</a></li>
+                    <li><a href="sae_tronc1.html" class="sae-link">SAE N°1</a></li>
+                    <li><a href="sae_tronc2.html" class="sae-link">SAE N°2</a></li>
+                    <li><a href="sae_tronc3.html" class="sae-link">SAE N°3</a></li>
+                </ul>
+            </nav>
+            <button class="nav-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+        <nav class="nav-mobile">
+            <ul>
+                <li><a href="index.html" class="active">Accueil</a></li>
+                <li><a href="cv.html">CV</a></li>
+                <li><a href="stage.html">Stage</a></li>
+                <li><a href="sae_tronc1.html" class="sae-link">SAE N°1</a></li>
+                <li><a href="sae_tronc2.html" class="sae-link">SAE N°2</a></li>
+                <li><a href="sae_tronc3.html" class="sae-link">SAE N°3</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="stage">
+        <div class="stage-container">
+            <div class="stage-card">
+                <div class="stage-image">
+                    <img src="images/imgsae1.png" alt="SAE 1"> 
+                </div>
+                <div class="stage-content">
+                    <h2>SAE 2.01</h2>
+                    <h3>Notre Objectif</h3>
+                    <p>Dans cette SAE, nous avons eu comme objectif de mettre en place un réseau informatique en configurant diverses services tels que Grafana, FTP, DNS, etc... sur des machines Centos8 via la plateforme Openstack</p>
+
+                    <h4>Réalisation</h4>
+                    <p>Durant cette SAE, j'ai pu créer des Instances Windows ainsi que Centos8, puis mis en place des réseaux ainsi que des routeurs afin d'avoir la connexion et de pouvoir continuer ! J'ai pu mettre place le service DNS, FTP ainsi que Service Web. Découverte de nouveaux services tels que NextCloud, Prometheus, Node_Exporter ou même Grafana.</p>
+
+                    <h4>Résultat</h4>
+                    <p>Grâce à cette SAE, j'ai pu découvrir de nouveaux services (Grafana,Node_Exporter,...), mieux comprendre les choses déjà vues, mais mal acquises et approfondir les choses comprises afin d'avoir une facilité pour plus tard !</p>
+
+                    <h4>Les Compétences</h4>
+                    <ul>
+                        <li>Mise en place d'un réseau.</li>
+                        <li>Création d'Instances.</li>
+                        <li>Mise en place de services (FTP, DNS, Web,...).</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Ayemen Loucif</p>
+        </div>
+    </footer>
+
+    <div id="sae-modal" class="modal">
+    </div>
+
+    <script src="js/script.js"></script>
+</body>
+
+</html>

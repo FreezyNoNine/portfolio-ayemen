@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Ayemen Loucif - Portfolio</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <header>
+        <div class="header-container">
+            <a href="index.html" class="logo">
+                Ayemen Loucif </a>
+            <nav class="nav-desktop">
+                <ul>
+                    <li><a href="index.html" class="active">Accueil</a></li>
+                    <li><a href="cv.html">CV</a></li>
+                    <li><a href="stage.html">Stage</a></li>
+                    <li><a href="sae_tronc1.html" class="sae-link">SAE N°1</a></li>
+                    <li><a href="sae_tronc2.html" class="sae-link">SAE N°2</a></li>
+                    <li><a href="sae_tronc3.html" class="sae-link">SAE N°3</a></li>
+                </ul>
+            </nav>
+            <button class="nav-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+        <nav class="nav-mobile">
+            <ul>
+                <li><a href="index.html" class="active">Accueil</a></li>
+                <li><a href="cv.html">CV</a></li>
+                <li><a href="stage.html">Stage</a></li>
+                <li><a href="sae_tronc1.html" class="sae-link">SAE N°1</a></li>
+                <li><a href="sae_tronc2.html" class="sae-link">SAE N°2</a></li>
+                <li><a href="sae_tronc3.html" class="sae-link">SAE N°3</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="stage">
+        <div class="stage-container">
+            <div class="stage-card">
+                <div class="stage-image">
+                    <img src="images/imgsae3.jpg" alt="SAE 1"> 
+                </div>
+                <div class="stage-content">
+                    <h2>SAE 2.04</h2>
+
+                    <h4>Réalisation</h4>
+                    <p>Durant cette SAE, j'ai pu utiliser un capteur température, et avec celui-ci j'ai pu récolter et visualiser les données grâce à l'utilisation de python, grafana et OpenStack. </p>
+
+                    <h4>Résultat</h4>
+                    <p>Grâce à cette SAE, j'ai pu voir comment on crée un capteur de température, comment on fait pour récupérer les données (grâce à python) et de pouvoir concrètement voir à quoi sert Grafana.</p>
+
+                    <h4>Les Compétences</h4>
+                    <ul>
+                        <li>Création du capteur de mesure de température.</li>
+                        <li>Visualiser les données acquises par le capteur.</li>
+                        <li>Développement du code python permettant d'acquérir les données.</li>
+                        <li>Installation d'infrastructure sur OpenStack.</li>
+                        <li>Stockage des données mesuré sur une base de données.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Ayemen Loucif</p>
+        </div>
+    </footer>
+
+    <div id="sae-modal" class="modal">
+    </div>
+
+    <script src="js/script.js"></script>
+</body>
+
+</html>

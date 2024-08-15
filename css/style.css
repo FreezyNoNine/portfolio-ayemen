@@ -1,0 +1,478 @@
+/* Styles généraux */
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Raleway:wght@400;500;600;700;800;900&display=swap');
+
+* { 
+    margin: 0; 
+}
+
+body {
+    background-color:#ff8271;
+    font-family: "raleway", sans-serif;
+    margin: 0; /* Supprimer les marges par défaut du body */
+    padding: 0; /* Supprimer les paddings par défaut du body */
+    overflow-y: auto;
+}
+
+html, body {
+    height: 100%;
+    margin: 0;
+    display: grid;
+    grid-template-rows: auto 1fr auto; /* Définit les lignes de la grille */
+    font-family: "raleway", sans-serif;
+}
+
+h1, h2, h3, h4, p, a, li {
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5); /* Exemple d'ombre */
+}
+
+/* Header */
+header {
+    background: linear-gradient(to right, #ff5f6d, #ffc371); /* Dégradé de couleurs */
+    color: #fff;
+    padding: 20px;
+    text-align: center; /* Centre le logo */
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 2em; /* Augmente la taille du logo */
+    font-weight: bold;
+    font-family: 'Montserrat', sans-serif;
+    text-decoration: none;
+    color: #fff;
+    text-shadow: 0 0 5px rgba(0, 0, 0, 0.5); /* Ajoute une ombre au texte */
+    position: relative; /* Pour l'effet de survol */
+}
+
+.logo::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    bottom: -5px;
+    left: 0;
+    background-color: #fff;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.3s ease;
+}
+
+.logo:hover::before {
+    transform: scaleX(1);
+}
+
+.nav-desktop ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.nav-desktop li {
+    margin: 0 15px;
+}
+
+.nav-desktop a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+    font-family: 'Montserrat', sans-serif; /* Police de caractère unique */
+    position: relative; /* Pour l'effet de survol */
+}
+
+.nav-desktop a::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    bottom: -5px; /* Positionne la ligne sous le texte */
+    left: 0;
+    background-color: #fff;
+    transform: scaleX(0); /* Cache la ligne par défaut */
+    transform-origin: left;
+    transition: transform 0.3s ease; /* Ajoute une transition */
+}
+
+.nav-desktop a:hover::before {
+    transform: scaleX(1); /* Affiche la ligne au survol */
+}
+
+.nav-toggle {
+    display: none; /* Cache le bouton sur les grands écrans */
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+}
+
+.nav-toggle span {
+    display: block;
+    width: 25px;
+    height: 3px;
+    background-color: #fff;
+    margin: 5px 0;
+    transition: 0.3s;
+}
+
+.nav-mobile {
+    display: none; /* Cache le menu mobile par défaut */
+}
+
+.nav-mobile ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-mobile li {
+    margin: 10px 0;
+}
+
+.nav-mobile a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+    font-family: 'Montserrat', sans-serif;
+}
+
+/* Accueil */
+#accueil { 
+    padding-top: 8%;
+    text-align: center; /* Centre le texte horizontalement */
+    display: grid;
+    place-items: center; /* Centre le contenu de #accueil */
+}
+
+#accueil .profile-picture {
+    width: 200px; 
+    height: 200px;
+    border-radius: 50%; 
+    overflow: hidden;
+    border: 2px solid black; /* Ajoute un contour noir de 2px */
+}
+
+#accueil .profile-picture img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ajuste l'image pour remplir le cercle */
+}
+
+.accueil-content { /* Nouveau conteneur pour le titre et les boutons */
+    text-align: center;
+}
+
+
+#accueil h2 {
+    margin: 0.2em;
+    padding: 0;
+    font-size: 3em; /* Agrandit le titre */
+}
+
+#accueil p {
+    font-size: 1.2em; /* Agrandit le texte */
+}
+
+.btn { 
+    display: inline-block; 
+    padding: 15px 30px; /* Agrandit les boutons */
+    background-color: #007bff; 
+    color: white; 
+    text-decoration: none; 
+    border-radius: 5px;
+    font-size: 1.2em; /* Agrandit le texte des boutons */
+    margin: 10px; /* Ajoute de l'espace entre les boutons */
+}
+
+
+/* Footer */
+footer { 
+    background-color: #333; 
+    color: white; 
+    padding: 20px 0; 
+    text-align: center;
+    position: fixed; /* Fixe le footer en bas */
+    bottom: 0; /* Colle le footer au bas de la fenêtre */
+    width: 100%; /* Assure que le footer occupe toute la largeur */
+}
+
+/* A propos */
+
+.contain1 {
+    position: relative;
+    width: 100%; /* Largeur initiale à 100% */
+    max-width: 800px; /* Largeur maximale à 800px */
+    min-height: 800px;
+    margin: 50px auto; /* Centrage horizontal */
+    box-shadow: 0px 35px 55px rgba(0, 0, 0, 0.1);
+}
+
+.haut1{
+    position: relative;
+    height: 300px;
+    background: linear-gradient(to right, #ff5f6d, #ffc371); /* Dégradé de couleurs */
+    padding: 50px;
+}
+
+.haut1 h2{
+    font-size: 3em;
+    color: white;
+    text-transform: uppercase;
+    line-height: 0.7em;
+    letter-spacing: 0.1em;
+}
+
+.haut1 h2 span{
+    font-size: 0.4em;
+    font-weight: 300;
+}
+
+.groupe1{
+    position: relative;
+    display: grid;
+    gap: 40px;
+    width: 100%;
+    grid-template-columns: 2fr 3fr;
+    margin-top: 20px;
+}
+
+.groupe1 .image1{
+    position: relative;
+    width: 100% ;
+}
+
+.groupe1 .image1 img{
+    width: 100%;
+}
+
+.groupe1 p {
+    color: white;
+    font-size: 1.1em;
+}
+
+/* Aime */
+.aime{
+    padding: 0 40px 30px;
+}
+
+.aime ul{
+    display: flex;
+    margin-top: 30px;
+    gap: 20px;
+    justify-content: space-between;
+}
+
+.aime h4 {
+    background: #232323;
+}
+
+.aime ul li {
+    list-style: none;
+    color: #333;
+    width: calc(100%/3);
+    padding: 20px 0;
+    display: flex;
+    flex-direction: column;
+    gap : 5px;
+    background: #f3f3f3;
+    text-align: center;
+    cursor: pointer;
+}
+
+.aime ul li i {
+    font-size: 2em;
+}
+
+/* CV */
+
+h4{
+    font-size: 1.1em;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    color: white;
+    background: crimson;
+    font-weight: 600;
+    padding: 0 15px;
+    margin-top: 20px;
+    display: inline-flex;
+}
+
+.cv-container {
+    max-width: 960px; /* Largeur maximale du CV */
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff; /* Fond blanc pour le CV */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Ombre subtile */
+    height: fit-content;  /* Assure que cv-container s'adapte à la hauteur du contenu */
+}
+
+.cv-header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.cv-header h1 {
+    font-size: 2.5em;
+    color: #333;
+}
+
+.subtitle {
+    font-size: 1.2em;
+    color: #777;
+}
+
+.cv-section {
+    margin-bottom: 30px;
+}
+
+.cv-section h2 {
+    font-size: 1.5em;
+    color: #333;
+    border-bottom: 2px solid #007bff; /* Ligne bleue sous le titre */
+    padding-bottom: 10px;
+    margin-bottom: 15px;
+}
+
+.cv-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.cv-section li {
+    margin-bottom: 10px;
+}
+
+.formation-item, .experience-item {
+    margin-bottom: 15px;
+}
+
+#cv{
+    padding-bottom: 5em;
+}
+
+/* Styles pour les médias plus petits (tablettes et mobiles) */
+@media (max-width: 768px) {
+    .cv-container {
+        max-width: 90%; /* Réduit la largeur du CV */
+    }
+
+    .cv-header h1 {
+        font-size: 2em; /* Réduit la taille du titre */
+    }
+
+    .cv-section h2 {
+        font-size: 1.2em; /* Réduit la taille des titres de section */
+    }
+}
+
+
+@media (max-width: 768px) {
+    .contain1 {
+        max-width: 95%; /* Ajustement de la largeur maximale pour les écrans plus petits */
+        margin: 20px auto; /* Réduction des marges pour les écrans plus petits */
+    }
+}
+
+@media (max-width: 768px) {
+    header {
+        padding: 10px; /* Réduit le padding pour les écrans plus petits */
+    }
+
+    nav a {
+        margin: 5px; /* Réduit la marge entre les liens */
+    }
+}
+
+/* Media Query pour les petits écrans */
+@media (max-width: 768px) {
+    .nav-desktop {
+        display: none;
+    }
+
+    .nav-toggle {
+        display: block;
+    }
+
+    .nav-mobile {
+        display: block;
+    }
+}
+
+/* Stage */
+#stage {
+    padding: 80px 0;
+    text-align: center;
+}
+
+.stage-container {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.stage-card {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Ombre plus prononcée */
+    overflow: hidden; /* Pour gérer le débordement de l'image */
+}
+
+#imgstage {
+    width: 100%;
+    height: 250px; /* Hauteur fixe pour l'image */
+    overflow: hidden;
+}
+
+.stage-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ajuste l'image pour couvrir tout l'espace */
+}
+
+.stage-content {
+    padding: 20px;
+}
+
+.stage-content h2 {
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.stage-content h3 {
+    color: #007bff;
+    font-weight: normal;
+    margin-bottom: 20px;
+}
+
+.stage-content p {
+    text-align: left;
+    margin: 20px;
+    font-size: 1.5em;
+}
+
+.stage-content ul {
+    list-style: disc;
+    margin: 20px;
+    font-size: 1.5em;
+    text-align: left;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    #stage {
+        padding: 40px 0;
+    }
+
+    .stage-card {
+        padding: 20px;
+    }
+
+    .stage-image {
+        height: 150px; /* Ajuste la hauteur de l'image pour les petits écrans */
+    }
+}
